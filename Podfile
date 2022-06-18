@@ -9,6 +9,5 @@ target 'Movies List' do
   pod 'Moya'
   pod 'SDWebImage'
   pod 'SVProgressHUD'
-  pod 'CocoaDebug'
 
 end
