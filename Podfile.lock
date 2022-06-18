@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.4.3)
+  - CocoaDebug (1.7.2)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - CocoaDebug
+  - Moya
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CocoaDebug
+    - Moya
+    - SDWebImage
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  CocoaDebug: 61cf93ada6ce8f3407507dc01f9b874d91ac1d5c
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: e82da2a4d9b87f8e17167327fa8abfa632b2e52c
+
+COCOAPODS: 1.11.2
