@@ -21,4 +21,15 @@ class MoviesListCollectionViewCell: UICollectionViewCell {
         imgMovie.layer.cornerRadius = 10.0
         vwPercentageContent.layer.cornerRadius = vwPercentageContent.frame.width / 2
     }
+    
+    func setData(item: ClassMoviesListItem) {
+        imgMovie.setUrl(withPath: item.posterPath)
+        
+        lblMovieName.text = item.originalTitle
+        lblDate.text = item.releaseDate
+        
+        let per = Int((item.voteAverage ?? 0) * 10)
+        lblPercentage.text = per.description + "%"
+        lblPercentage.superview?.setupPercentage(per)
+    }
 }

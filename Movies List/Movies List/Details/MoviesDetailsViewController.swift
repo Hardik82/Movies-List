@@ -2,10 +2,11 @@
 //  MoviesDetailsViewController.swift
 //  Movies List
 //
-//  Created by + on 17/06/22.
+//  Created by MacOS on 17/06/22.
 //
 
 import UIKit
+import SDWebImage
 
 class MoviesDetailsViewController: UIViewController {
     
@@ -33,23 +34,8 @@ class MoviesDetailsViewController: UIViewController {
     }
     
     func setupView() {
-        if let posterPath = self.data?.posterPath {
-            let image = "https://image.tmdb.org/t/p/w500" + posterPath
-            imageMovie.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: ""), completed: nil)
-            imageMovie.backgroundColor = .clear
-        } else {
-            imageMovie.image = UIImage(named: "")
-            imageMovie.backgroundColor = .randomColor
-        }
-        if let backdropPath = self.data?.backdropPath {
-            let image = "https://image.tmdb.org/t/p/w500" + backdropPath
-            imageMovieBackground.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: ""), completed: nil)
-            imageMovieBackground.backgroundColor = .clear
-        } else {
-            imageMovieBackground.image = UIImage(named: "")
-            imageMovieBackground.backgroundColor = .randomColor
-        }
-        
+        imageMovie.setUrl(withPath: self.data?.posterPath)
+        imageMovieBackground.setUrl(withPath: self.data?.backdropPath)
         
         lblBudget.text = "\(data?.budget ?? 0)"
         lblRevenue.text = "\(data?.revenue ?? 0)"

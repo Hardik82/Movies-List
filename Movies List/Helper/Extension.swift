@@ -2,7 +2,7 @@
 //  Extension.swift
 //  Movies List
 //
-//  Created by mac on 18/06/22.
+//  Created by MacOS on 18/06/22.
 //
 
 import Foundation
@@ -47,5 +47,19 @@ extension UIView {
             }
         }
         layer.addSublayer(circleShape)
+    }
+}
+
+extension UIImageView {
+    func setUrl(withPath path: String?) {
+        guard let path = path else {
+            image = UIImage(named: "")
+            backgroundColor = .randomColor
+            return
+        }
+        
+        let image = "https://image.tmdb.org/t/p/w500" + path
+        sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: ""), completed: nil)
+        backgroundColor = .clear
     }
 }

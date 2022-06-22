@@ -34,15 +34,7 @@ class Movies_ListTests: XCTestCase {
             try? testExample()
         }
     }
-//    func testExample() throws {
-//        let input = 40
-//        let output = Int(pow(Double(input), 2))
-//
-//        XCTAssertEqual(input * input, output, "Square by pow is not working")
-//    }
-    
-    
-    
+
     func checkGettingListFromAPI() throws {
         OpenApiNetworkManager.shared.getMoviesList(of: .getTrendingMoviesList) { response in
             switch response {
